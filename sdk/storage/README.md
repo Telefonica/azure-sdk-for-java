@@ -17,3 +17,39 @@ To get started with a specific library, see the **README.md** file located in th
 
 
 ![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-java%2Fsdk%2Fstorage%2FREADME.png)
+
+
+## Shading libs
+
+### Packaging:
+```
+mvn deploy -pl com.azure:azure-storage-common,com.azure:azure-storage-blob -Dmaven.javadoc.skip=true -Dcheckstyle.skip=true -DskipTests
+```
+
+### Deploy:
+Update your ~/.m2/settings.yml
+```
+<settings>
+  <servers>
+    <server>
+      <id>maven-4p</id>
+      <username>...</username>
+      <password>...</password>
+      <configuration>
+        <region>us-east-1</region>
+        <publicRepository>false</publicRepository>
+      </configuration>
+    </server>
+
+    <server>
+      <id>4p-my-maven-repo</id>
+      <url>https://mymavenrepo.com/repo/J4yLiGooDXJRjOOFrWjB</url>
+    </server>
+  </servers>
+</settings>
+```
+
+Run this command at the root project
+```
+mvn deploy -pl com.azure:azure-storage-blob -Dmaven.javadoc.skip=true -Dcheckstyle.skip=true -DskipTests
+```
