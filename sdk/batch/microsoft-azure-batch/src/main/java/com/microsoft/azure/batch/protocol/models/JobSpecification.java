@@ -33,6 +33,7 @@ public class JobSpecification {
      * If not specified, the default value is -1, which means there's no limit
      * to the number of tasks that can be run at once. You can update a job's
      * maxParallelTasks after it has been created using the update job API.
+     * This property is currently in private preview.
      */
     @JsonProperty(value = "maxParallelTasks")
     private Integer maxParallelTasks;
@@ -172,7 +173,7 @@ public class JobSpecification {
     }
 
     /**
-     * Get the value of maxParallelTasks must be -1 or greater than 0 if specified. If not specified, the default value is -1, which means there's no limit to the number of tasks that can be run at once. You can update a job's maxParallelTasks after it has been created using the update job API.
+     * Get the value of maxParallelTasks must be -1 or greater than 0 if specified. If not specified, the default value is -1, which means there's no limit to the number of tasks that can be run at once. You can update a job's maxParallelTasks after it has been created using the update job API. This property is currently in private preview.
      *
      * @return the maxParallelTasks value
      */
@@ -181,7 +182,7 @@ public class JobSpecification {
     }
 
     /**
-     * Set the value of maxParallelTasks must be -1 or greater than 0 if specified. If not specified, the default value is -1, which means there's no limit to the number of tasks that can be run at once. You can update a job's maxParallelTasks after it has been created using the update job API.
+     * Set the value of maxParallelTasks must be -1 or greater than 0 if specified. If not specified, the default value is -1, which means there's no limit to the number of tasks that can be run at once. You can update a job's maxParallelTasks after it has been created using the update job API. This property is currently in private preview.
      *
      * @param maxParallelTasks the maxParallelTasks value to set
      * @return the JobSpecification object itself.
