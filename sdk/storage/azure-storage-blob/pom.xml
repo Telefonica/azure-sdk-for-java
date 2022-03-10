@@ -21,13 +21,19 @@
 
   <distributionManagement>
     <repository>
-      <!-- 
-        <id>maven-4p</id>
-        <url>s3://4p-maven/snapshots</url>
+      <!--       
+      <id>maven-4p</id>
+      <url>s3://4p-maven/snapshots</url>
       -->
+      
+      <id>public-maven-4p</id>
+      <url>s3://4p-public-artifacts/baikal/releases</url>
+     
+      <!-- 
       <id>my-maven-4p</id>
       <name>4P My Maven repo Snapshots</name>
-      <url>${env.BAIKAL_PUBLIC_MAVEN}</url>
+      <url>${env.BAIKAL_PUBLIC_MAVEN}</url> 
+      -->
     </repository>
     <snapshotRepository>
       <id>maven-4p</id>

@@ -42,6 +42,16 @@ Update your ~/.m2/settings.yml
     </server>
 
     <server>
+      <id>public-maven-4p</id>
+      <username>...</username>
+      <password>...</password>
+      <configuration>
+        <region>us-east-1</region>
+        <publicRepository>true</publicRepository>
+      </configuration>
+    </server>
+
+    <server>
       <id>4p-my-maven-repo</id>
       <url>https://mymavenrepo.com/repo/J4yLiGooDXJRjOOFrWjB</url>
     </server>
